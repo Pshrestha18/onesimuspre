@@ -356,7 +356,6 @@ React.useEffect(() => {
               <span className="pill">Djent</span>
               <span className="pill">Progressive Rock</span>
               <span className="pill">Post-hardcore</span>
-              <span className="pill">Math Rock</span>
             </div>
           </div>
 
