@@ -746,3 +746,104 @@ button, input, textarea{ font:inherit; }
     min-height: 190px;
   }
 }
+
+/* mobile fixes */
+.navLinks{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color: var(--muted);
+  font-size:14px;
+}
+
+@media (max-width: 900px){
+  .navInner{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+  .brand{
+    width: 100%;
+    justify-content: center;
+  }
+  .navLinks{
+    width: 100%;
+    gap: 6px;
+    row-gap: 8px;
+  }
+  .navLinks a{
+    padding: 8px 9px;
+    font-size: 13px;
+  }
+  .ctaRow{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px){
+  .nav{
+    position: sticky;
+  }
+  .navInner{
+    gap: 10px;
+  }
+  .navLinks{
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .navLinks::-webkit-scrollbar{
+    display: none;
+  }
+  .navLinks a{
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+  .hero{
+    padding-top: 28px;
+  }
+  .heroMedia{
+    min-height: 300px;
+  }
+  .heroMedia img{
+    transform: none;
+    object-position: center top;
+  }
+  .heroCaption{
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .presaveCard{
+    padding: 14px;
+    gap: 14px;
+  }
+  .presaveArtwork{
+    max-width: 100%;
+  }
+  .aboutImage{
+    min-height: 240px;
+    max-height: 320px;
+    object-position: center top;
+  }
+  .shopCard{
+    padding: 14px;
+    gap: 14px;
+  }
+  .shopImageWrap{
+    min-height: 160px;
+  }
+  .videoThumb, .visualCard img, .gItem img{
+    height: 200px;
+  }
+  .section{
+    padding: 28px 0;
+  }
+}

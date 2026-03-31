@@ -18,21 +18,33 @@ import shopTabsPhoto from "./assets/shop-tabs-enhanced.jpg";
  */
 const ARTIST = {
   name: "Onesimus Thapa",
-  tagline: "Guitarist • Arranger • Tutor • Producer • Bassist",
-  location: "Toronto, Canada",
+  tagline: "Modern progressive guitar, cinematic visuals, and music built for impact.",
+  city: "Toronto, Canada",
+
   email: "Onesimusthapa860@gmail.com",
-  spotifyArtistUrl:
-    "https://open.spotify.com/artist/1OiTeBlJOR5FQNtwOJzOZ5?si=M3GjvprdSEajafQv9vhNGQ",
-  spotifyArtistId: "1OiTeBlJOR5FQNtwOJzOZ5",
-  appleMusicUrl: "https://music.apple.com/us/artist/onesimus-thapa/1523139664",
-  youtubeUrl: "https://m.youtube.com/@onesimusthapa",
+
+  instagramHandle: "@anisimusthapa",
   instagramUrl: "https://www.instagram.com/anisimusthapa/",
+
+  youtubeUrl: "https://www.youtube.com/@OnesimusThapa",
+  spotifyArtistUrl: "https://open.spotify.com/artist/1OiTeBlJOR5FQNtwOJzOZ5?si=ymIcZZ0iSZGtSQMzzeBNJQ",
+  appleMusicUrl: "https://music.apple.com/us/artist/onesimus-thapa/1523139664",
+
   supportUrl: "https://drive.google.com/drive/folders/1cmhAemz39SA79_azwHSn-KLcmn-lyB5B",
   bandcampEseosaUrl: "https://onesimus860.bandcamp.com/track/eseosa",
+
   preSaveUrl: "https://show.co/VaE3fDF",
-  tabsBundleUrl: "https://drive.google.com/drive/folders/1cmhAemz39SA79_azwHSn-KLcmn-lyB5B",
+
+  exodusSpotifyUrl:
+    "https://open.spotify.com/track/6YThzLVsBLdMiMXU1YNQeE?si=a71ebfe47fa9443c",
+
+  exodusSpotifyEmbedUrl:
+    "https://open.spotify.com/embed/track/6YThzLVsBLdMiMXU1YNQeE?utm_source=generator",
+
+  tabsBundleUrl:
+    "https://drive.google.com/drive/folders/1cmhAemz39SA79_azwHSn-KLcmn-lyB5B",
+
   paypalUrl: "https://www.paypal.me/anisimusthapa",
-  exodusSpotifyEmbedUrl: "https://open.spotify.com/embed/track/6HwFWBdIkbZ2BKWWrp3Qfn?utm_source=generator",
 };
 
 type GalleryItem = {
@@ -58,32 +70,39 @@ type Release = {
 
 const releases: Release[] = [
   {
+    title: "EXODUS",
+    artists: "Onesimus Thapa, Angel Subba",
+    year: "2026",
+    blurb: "",
+    listenUrl: ARTIST.exodusSpotifyUrl,
+  },
+  {
     title: "ESEOSA",
     artists: "Onesimus Thapa, Angel Subba",
     year: "2025",
     blurb:
-      "Features complex time signatures “31/8” flowing into different variations, with heavy progressive instruments and ambient textures.",
+      "Progressive instrumental with shifting rhythms and layered textures.",
     listenUrl: ARTIST.spotifyArtistUrl,
   },
   {
     title: "Reminiscenes",
     artists: "Onesimus Thapa, Angel Subba",
     year: "2023",
-    blurb: "The first instrumental that blends heavy riffs with melodic depth, delivering a powerful message in the breakdown.",
+    blurb: "Melodic instrumental driven by heavy riffs and dynamic transitions.",
     listenUrl: ARTIST.spotifyArtistUrl,
   },
   {
     title: "Joy",
     artists: "delayed.blu, Onesimus Thapa",
     year: "2024",
-    blurb: "A collaboration with Germany-based artist Roman Kunze, Joy brings together diverse musical styles.",
+    blurb: "Collaborative track blending styles with a modern melodic focus.",
     listenUrl: ARTIST.spotifyArtistUrl,
   },
   {
     title: "Apura Vakya",
     artists: "Rohan Magar, Onesimus Thapa",
     year: "2024",
-    blurb: "Produced by Onesimus Thapa, Apura Vakya is a collaboration with singer-songwriter Rohan Magar.",
+    blurb: "Produced by Onesimus Thapa, in collaboration with singer-songwriter Rohan Magar.",
     listenUrl: ARTIST.spotifyArtistUrl,
   },
 ];
@@ -96,7 +115,7 @@ type Video = {
 
 const videos: Video[] = [
   {
-    title: "ESEOSA – Onesimus Thapa & Angel Subba | Official Visualizer",
+    title: "ESEOSA - Onesimus Thapa & Angel Subba | Official Visualizer",
     published: "Aug 17, 2025",
     youtubeId: "7BgPeRmRhFE",
   },
@@ -313,8 +332,8 @@ React.useEffect(() => {
               <a className="btn" href={ARTIST.bandcampEseosaUrl} target="_blank" rel="noreferrer">
                 Bandcamp <ExternalIcon />
               </a>
-              <a className="btn" href={ARTIST.preSaveUrl} target="_blank" rel="noreferrer">
-                Pre-save <ExternalIcon />
+              <a className="btn" href={ARTIST.exodusSpotifyUrl} target="_blank" rel="noreferrer">
+                New-Release <ExternalIcon />
               </a>
               <button className="btn" onClick={() => scrollToId("contact")}>
                 Lessons / Contact
@@ -324,11 +343,11 @@ React.useEffect(() => {
             <div className="presaveCard card">
               <img src={exodusCover} alt="EXODUS artwork" className="presaveArtwork" />
               <div className="presaveCopy">
-                <div className="small">Upcoming release</div>
+                <div className="small">New release</div>
                 <h3 className="presaveTitle">EXODUS</h3>
-                <p className="presaveText">Pre-save the new single and be ready when it drops.</p>
-                <a className="btn btnPrimary" href={ARTIST.preSaveUrl} target="_blank" rel="noreferrer">
-                  Pre-save EXODUS <ExternalIcon />
+                <p className="presaveText">Now streaming on Spotify. Listen to the latest release in collaboration with Angel Subba.</p>
+                <a className="btn btnPrimary" href={ARTIST.exodusSpotifyUrl} target="_blank" rel="noreferrer">
+                  Listen to EXODUS <ExternalIcon />
                 </a>
               </div>
             </div>
@@ -346,7 +365,7 @@ React.useEffect(() => {
             <div className="heroOverlay" />
             <div className="heroCaption">
               <div>
-                <div style={{ fontWeight: 650 }}>Based in {ARTIST.location}</div>
+                <div style={{ fontWeight: 650 }}>Based in {ARTIST.city}</div>
                 <div className="small">Live • Studio • Collaborations</div>
               </div>
               <div className="small">Scroll ↓</div>
@@ -371,8 +390,8 @@ React.useEffect(() => {
                 <a className="btn" href={ARTIST.bandcampEseosaUrl} target="_blank" rel="noreferrer">
                   Eseosa on Bandcamp <ExternalIcon />
                 </a>
-                <a className="btn" href={ARTIST.preSaveUrl} target="_blank" rel="noreferrer">
-                  Pre-save <ExternalIcon />
+                <a className="btn" href={ARTIST.exodusSpotifyUrl} target="_blank" rel="noreferrer">
+                  New release <ExternalIcon />
                 </a>
               </div>
             </div>
@@ -381,6 +400,13 @@ React.useEffect(() => {
               <div className="card" style={{ padding: 18 }}>
                 <div style={{ fontWeight: 650, marginBottom: 10 }}>Spotify</div>
                 <div className="spotifyPair">
+                  <iframe
+                   title="EXODUS - Spotify"
+                   className="spotifyEmbed"
+                   src={ARTIST.exodusSpotifyEmbedUrl}
+                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                   loading="lazy"
+                   />
                   <iframe
                     title="ESEOSA — Spotify"
                     className="spotifyEmbed"
@@ -410,6 +436,9 @@ React.useEffect(() => {
                     </a>
                     <a className="btn" href={ARTIST.bandcampEseosaUrl} target="_blank" rel="noreferrer">
                       Bandcamp <ExternalIcon />
+                    </a>
+                    <a className="btn" href={ARTIST.exodusSpotifyUrl} target="_blank" rel="noreferrer">
+                       New release <ExternalIcon />
                     </a>
                   </div>
 
@@ -493,10 +522,11 @@ React.useEffect(() => {
                     <div style={{ fontWeight: 700, letterSpacing: 0.2 }}>{r.title}</div>
                     <div className="small">{r.year}</div>
                   </div>
-                  <div className="small" style={{ color: "var(--muted)" }}>
+                  <div className="small" style={{ color: "var(--muted)", marginBottom: 6 }}>
                     {r.artists}
                   </div>
-                  <div style={{ color: "var(--muted)", lineHeight: 1.65, fontSize: 14 }}>{r.blurb}</div>
+                  {r.blurb && (
+                  <div style={{ color: "var(--muted)", lineHeight: 1.65, fontSize: 14 }}>{r.blurb}</div>)}
                   <div style={{ marginTop: 6 }}>
                     <a className="btn btnPrimary" href={r.listenUrl} target="_blank" rel="noreferrer">
                       Listen <ExternalIcon />
