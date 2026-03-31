@@ -18,7 +18,7 @@ import shopTabsPhoto from "./assets/shop-tabs-enhanced.jpg";
  */
 const ARTIST = {
   name: "Onesimus Thapa",
-  tagline: "Modern progressive guitar, cinematic visuals, and music built for impact.",
+  tagline: "",
   city: "Toronto, Canada",
 
   email: "Onesimusthapa860@gmail.com",
